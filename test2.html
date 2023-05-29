@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .skill-icon {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s;
+    }
+
+    .text-skill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      color: #333;
+      font-size: 24px;
+      font-weight: bold;
+      opacity: 0;
+      transform: rotateY(180deg);
+      transition: transform 0.5s, opacity 0.5s;
+    }
+
+    .container:hover .skill-icon {
+      transform: rotateY(180deg);
+    }
+
+    .container:hover .text-skill {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  </style>
+</head>
+<body>
+  <div><img src="phone.png" alt=""></div>
+  <div class="row container">
+    <div class="col-sm-3 lang" id="code"><img class="skill-icon" src="python-icon.png" alt="Image">
+    <div class="text-skill">Python</div></div>
+  </div>
+</body>
+</html>
+
